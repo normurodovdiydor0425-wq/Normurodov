@@ -1,0 +1,2 @@
+# Normurodov
+O'rganish uchun
