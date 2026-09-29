@@ -1,0 +1,24 @@
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+
+df=pd.DataFrame({
+    "oyligi":[500,600,700,1000,3000],
+    "kredit_tarixi":[2,4,3,2,15],
+    "natija":[0,0,0,1,0]
+})
+
+X=df[["oyligi","kredit_tarixi"]]
+y=df["natija"]
+
+ai_model=LogisticRegression()
+
+ai_model.fit(X,y)
+
+df1=pd.DataFrame({
+    "oyligi":[2000],
+    "kredit_tarixi":[12]
+})
+natija=ai_model.predict(df1)
+
+
+print(natija)
